@@ -74,7 +74,8 @@
     window.addEventListener('keyup', function(e) {
       e = e || window.event;
 
-      if (!shortcuts.isInputActive() && !shortcuts.hasModifierKey(e) && options.navigateWithJK && e.keyCode == KEYS.SLASH) {
+      // if (!shortcuts.isInputActive() && !shortcuts.hasModifierKey(e) && options.navigateWithJK && e.keyCode == KEYS.SLASH) {
+      if (!shortcuts.isInputActive() && options.focusWithSlash && e.keyCode == 55) {
         searchbox.value = searchbox.value + " ";
         searchbox.focus();
       }
